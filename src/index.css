@@ -36,3 +36,7 @@ code {
   color: white;
   background-color: red;
 }
+h1 {
+  text-align: center;
+  color: green;
+}
