@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import React, { useState } from "react";
+import numbers from "./numbers";
 function App() {
+  let [active, setActive] = useState({});
+  const clicked = (index) => () => {
+    setActive((state) => ({
+      ...state,
+      [index]: !state[index],
+    }));
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        {numbers.map((number, index) => {
+          return (
+            <div
+              id={index}
+              key={index}
+              className={`days ${active[index] ? "active" : ""}`}
+              onClick={clicked(index)}
+            >
+              {number}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
