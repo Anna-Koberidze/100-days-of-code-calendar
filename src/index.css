@@ -32,11 +32,24 @@ code {
   flex-wrap: wrap;
 }
 .active {
-  border: red;
+  border: 2px solid gold;
   color: white;
-  background-color: red;
+  background-color: orangered;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 h1 {
   text-align: center;
   color: green;
+}
+button {
+  display: inline-block;
+  background-color: aquamarine;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }

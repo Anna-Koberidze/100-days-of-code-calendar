@@ -20,6 +20,10 @@ function App() {
     setSaved((saved = saved + 1));
     console.log("saved successfully");
   };
+  const unmountSave = (e) => {
+    e.preventDefault();
+    setSaved((saved = 0));
+  };
   useEffect(() => {
     if (saved > 0) {
       localStorage.setItem("active", JSON.stringify(active));
@@ -40,6 +44,12 @@ function App() {
     <div onLoad={handleLoad}>
       <h1>100 days of code challenge check off calendar</h1>
       <div className="App">
+        <div className="button-container">
+          <button className="note__save" onClick={handleSave}>
+            activate saving mode
+          </button>
+          <button onClick={unmountSave}>deactivate saving mode</button>
+        </div>
         <div className="container">
           {numbers.map((number, index) => {
             return (
@@ -53,9 +63,6 @@ function App() {
               </div>
             );
           })}
-          <button className="note__save" onClick={handleSave}>
-            save
-          </button>
         </div>
       </div>
     </div>
