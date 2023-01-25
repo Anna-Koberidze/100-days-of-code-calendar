@@ -43,12 +43,15 @@ function App() {
   return (
     <div onLoad={handleLoad}>
       <h1>100 days of code challenge check off calendar</h1>
+
       <div className="App">
         <div className="button-container">
           <button className="note__save" onClick={handleSave}>
             activate saving mode
           </button>
-          <button onClick={unmountSave}>deactivate saving mode</button>
+          <button className="unmount-save" onClick={unmountSave}>
+            deactivate saving mode
+          </button>
         </div>
         <div className="container">
           {numbers.map((number, index) => {

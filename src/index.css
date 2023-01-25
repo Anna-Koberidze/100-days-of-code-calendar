@@ -25,6 +25,7 @@ code {
   min-width: 20px;
   min-height: 20px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 .container {
   display: flex;
@@ -32,10 +33,10 @@ code {
   flex-wrap: wrap;
 }
 .active {
-  border: 2px solid gold;
+  border-color: orange;
   color: white;
   background-color: orangered;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 h1 {
   text-align: center;
@@ -43,10 +44,14 @@ h1 {
 }
 button {
   display: inline-block;
-  background-color: aquamarine;
+  background-color: green;
   border: none;
   padding: 10px;
   cursor: pointer;
+  color: white;
+}
+.unmount-save {
+  background-color: red;
 }
 .button-container {
   display: flex;
