@@ -34,6 +34,7 @@ code {
   min-height: 20px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  color: #963484;
 }
 .days:hover {
   border-color: white;
