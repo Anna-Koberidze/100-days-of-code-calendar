@@ -28,12 +28,11 @@ code {
   border: 1px solid white;
   border-radius: 15px;
   position: relative;
-  padding: 20px;
-  margin: 20px;
-  min-width: 20px;
-  min-height: 20px;
-  max-width: 21px;
-  max-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   color: #963484;
@@ -50,10 +49,11 @@ code {
   width: 100%;
   display: grid;
   position: absolute;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 75px));
-  gap: 5px 60px;
+  grid-template-columns: repeat(auto-fit, minmax(62px, 62px));
+  gap: 60px;
   align-items: center;
   justify-content: center;
+  margin-top: 2vh;
 }
 .active {
   border-color: #f9fbb2;
@@ -102,4 +102,33 @@ button:active {
   .container {
     gap: 10px;
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    0deg,
+    rgba(162, 210, 255, 0.295) 5%,
+    rgba(255, 200, 221, 1) 35%,
+    #96348467 100%
+  );
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(162, 210, 255, 1) 0%,
+    rgba(255, 200, 221, 1) 35%,
+    #963484 100%
+  );
 }
