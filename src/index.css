@@ -97,3 +97,9 @@ button:active {
 .app {
   align-items: center;
 }
+
+@media (max-width: 1000px) {
+  .container {
+    gap: 10px;
+  }
+}
