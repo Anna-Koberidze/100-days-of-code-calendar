@@ -32,6 +32,8 @@ code {
   margin: 20px;
   min-width: 20px;
   min-height: 20px;
+  max-width: 21px;
+  max-height: 21px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   color: #963484;
@@ -45,9 +47,13 @@ code {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .container {
-  display: flex;
+  width: 100%;
+  display: grid;
   position: absolute;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 75px));
+  gap: 5px 60px;
+  align-items: center;
+  justify-content: center;
 }
 .active {
   border-color: #f9fbb2;
@@ -87,4 +93,7 @@ button:active {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+.app {
+  align-items: center;
 }
